@@ -1,117 +1,111 @@
-# Stacksphere
+<div align="center">
+  <img src="https://res.cloudinary.com/dano796/image/upload/stack_sphere_logo.svg" width="120px" alt="GitHub Stack Sphere" />
+  <h1 style="font-size: 28px; margin: 10px 0;">GitHub Stack Sphere</h1>
+  <p>Showcase your tech stack on a spinning sphere for your GitHub README!</p>
+</div>
 
-Animated SVG tech stack sphere for GitHub READMEs.  
-Embed your dev stack as a spinning 3D cloud — pure CSS, no JavaScript, works everywhere.
+<div align="center">
 
-![Demo](https://stacksphere.vercel.app/stack.svg?icons=typescript,react,postgresql,docker,python,git,figma,tailwindcss,supabase,nodejs)
+[![Stars](https://img.shields.io/github/stars/dano796/github-stack-sphere?style=flat&color=FFD700)](https://github.com/dano796/github-stack-sphere/stargazers)
+[![Last Commit](https://img.shields.io/github/last-commit/dano796/github-stack-sphere?color=3BBF48)](https://github.com/dano796/github-stack-sphere/commits/main)
+[![License](https://img.shields.io/github/license/dano796/github-stack-sphere)](LICENSE)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fdano796%2Fgithub-stack-sphere&label=visitors&countColor=%230c7ebe&style=flat&labelStyle=none)
+
+<img src="https://github-stack-sphere.vercel.app/stack.svg?icons=javascript,typescript,python,postgresql,mysql,supabase,express,react,angular,tailwindcss,git,github,figma,trello,html5,css3,docker,pandas,numpy" width="500" alt="Demo" />
+
+</div>
 
 ---
 
 ## Usage
 
-Add this to your GitHub profile `README.md`:
+Copy and paste this into your markdown file.
+
+Change the `?icons=` value to the slugs you want.
 
 ```md
-![My Stack](https://stacksphere.vercel.app/stack.svg?icons=typescript,react,docker)
+![My Tech Stack](https://github-stack-sphere.vercel.app/stack.svg?icons=javascript,typescript,python,postgresql,mysql,supabase,express,react,angular,tailwindcss,git,github,figma,trello,html5,css3,docker,pandas,numpy)
 ```
 
 Or with HTML for size control:
 
 ```html
-<img src="https://stacksphere.vercel.app/stack.svg?icons=typescript,react,docker" width="500" alt="My Stack" />
+<img
+  src="https://github-stack-sphere.vercel.app/stack.svg?icons=javascript,typescript,python,postgresql,mysql,supabase,express,react,angular,tailwindcss,git,github,figma,trello,html5,css3,docker,pandas,numpy"
+  width="500"
+  alt="My tech stack"
+/>
 ```
+
+And that's it. It's really that simple!
 
 ---
 
 ## Parameters
 
-| Parameter | Default | Values | Description |
-|-----------|---------|--------|-------------|
-| `icons` | required | comma-separated slugs | Tech icons to display (max 30) |
-| `theme` | `dark` | `dark` `light` `auto` | Background theme. `auto` adapts to viewer's OS setting |
-| `speed` | `30` | `5`–`60` | Seconds per full rotation. Higher = slower |
-| `size` | `500` | `300`–`800` | SVG width in pixels |
-| `v` | — | any | Cache-busting. Increment when updating your icon list |
-
-### Finding icon slugs
-
-Go to [simpleicons.org](https://simpleicons.org), search for a technology, and use the name shown as the slug in lowercase with spaces replaced by hyphens.
-
-Examples: `typescript`, `react`, `postgresql`, `scikit-learn`, `tailwindcss`
+| Parameter | Default  | Values                | Description                                            |
+| --------- | -------- | --------------------- | ------------------------------------------------------ |
+| `icons`   | required | comma-separated slugs | Tech icons to display (max 30)                         |
+| `theme`   | `dark`   | `dark` `light` `auto` | Background theme. `auto` adapts to viewer's OS setting |
+| `speed`   | `30`     | `5`–`60`              | Seconds per full rotation. Higher = slower             |
+| `size`    | `500`    | `300`–`800`           | SVG width in pixels                                    |
+| `v`       | —        | any                   | Cache-busting. Increment when updating your icon list  |
 
 ---
 
 ## Examples
 
-**Dark theme (default)**
-```
-https://stacksphere.vercel.app/stack.svg?icons=typescript,react,nodejs,postgresql,docker
+#### `icons`
+
+List the slugs you want, separated by commas (max 30). Find slugs at [simpleicons.org](https://simpleicons.org).
+
+```md
+![My Stack](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker,postgresql,python)
 ```
 
-**Light theme**
-```
-https://stacksphere.vercel.app/stack.svg?icons=typescript,react,nodejs,postgresql,docker&theme=light
+#### `theme`
+
+Controls the background color. `auto` adapts to the viewer's GitHub dark/light mode.
+
+```md
+![Dark](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&theme=dark)
+![Light](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&theme=light)
+![Auto](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&theme=auto)
 ```
 
-**Auto theme** (adapts to viewer's GitHub dark/light mode)
-```
-https://stacksphere.vercel.app/stack.svg?icons=typescript,react,nodejs,postgresql,docker&theme=auto
+#### `speed`
+
+Seconds per full rotation. Default is `30`. Higher = slower.
+
+```md
+![Fast](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&speed=10)
+![Slow](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&speed=50)
 ```
 
-**Slow rotation**
+#### `size`
+
+SVG width in pixels. Default is `500`. Height is always 80% of width.
+
+```md
+![Small](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&size=300)
+![Large](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&size=700)
 ```
-https://stacksphere.vercel.app/stack.svg?icons=typescript,react,docker&speed=45
+
+#### `v`
+
+Not rendered — only used for cache-busting. If you update your icon list and GitHub still shows the old version, increment this value.
+
+```md
+![My Stack](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&v=2)
 ```
 
 ---
 
-## Cache busting
+## Finding icon slugs
 
-GitHub caches README images through its Camo proxy. If you update your icon list and the old version still shows, increment the `v` parameter:
+Go to [simpleicons.org](https://simpleicons.org), search for a technology, and use the slug shown under the icon name.
 
-```md
-![My Stack](https://stacksphere.vercel.app/stack.svg?icons=typescript,react,docker&v=2)
-```
-
----
-
-## Self-hosting
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org) 20+
-- [Vercel CLI](https://vercel.com/docs/cli): `npm i -g vercel`
-
-### 1. Clone and install
-
-```bash
-git clone https://github.com/your-username/stacksphere.git
-cd stacksphere
-npm install
-```
-
-### 2. Test locally
-
-```bash
-node test-local.mjs
-# Opens test-output.svg — verify the animation in Chrome or Firefox
-```
-
-### 3. Deploy to Vercel
-
-```bash
-vercel        # first deploy + project setup
-vercel --prod # promote to production
-```
-
-Vercel will give you a URL like `https://stacksphere.vercel.app`.  
-Your endpoint is: `https://your-url.vercel.app/stack.svg`
-
-### 4. Use your own instance
-
-```md
-![My Stack](https://your-url.vercel.app/stack.svg?icons=typescript,react,docker)
-```
+Examples: `typescript`, `react`, `postgresql`, `scikit-learn`, `tailwindcss`
 
 ---
 
@@ -128,6 +122,26 @@ The SVG contains no JavaScript. All animation is pure CSS `@keyframes` with pre-
 
 ---
 
+## Contributing
+
+Stack Sphere is always open to improvements and contributions. Check the [Open Issues](https://github.com/dano796/github-stack-sphere/issues) if you want to contribute, or open a new one to add your own improvements/ideas. Before contributing, please read the [Contribution Guide](./CONTRIBUTING.md).
+
+---
+
+## Support the project
+
+GitHub Stack Sphere is free to use. If you find it useful, you can support the project by:
+
+- Linking back to this repo when using it in your README. 🔗
+- Starring and sharing the project. ⭐
+- Making a one-time donation via [PayPal](https://www.paypal.me/dano796). ☕
+
+Thank you! ❤️
+
+---
+
 ## License
 
-MIT
+This project is licensed under the [MIT License](./LICENSE).
+
+Attribution is appreciated.
