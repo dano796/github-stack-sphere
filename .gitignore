@@ -1,0 +1,5 @@
+node_modules/
+.vercel/
+test-output.svg
+.env
+.env.local

@@ -1,0 +1,12 @@
+{
+  "name": "stacksphere",
+  "version": "1.0.0",
+  "description": "Animated SVG tech stack sphere for GitHub READMEs — embed your dev stack as a spinning 3D cloud",
+  "type": "module",
+  "dependencies": {
+    "simple-icons": "^13.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
