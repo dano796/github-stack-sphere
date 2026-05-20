@@ -1,5 +1,9 @@
 <div align="center">
-  <img src="https://res.cloudinary.com/dano796/image/upload/stack_sphere_logo.svg" width="120px" alt="GitHub Stack Sphere" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://res.cloudinary.com/dano796/image/upload/stack_sphere_logo.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://res.cloudinary.com/dano796/image/upload/stack_sphere_logo_light.svg" />
+    <img src="https://res.cloudinary.com/dano796/image/upload/stack_sphere_logo.svg" width="120px" alt="GitHub Stack Sphere" />
+  </picture>
   <h1 style="font-size: 28px; margin: 10px 0;">GitHub Stack Sphere</h1>
   <p>Showcase your tech stack on a spinning sphere for your GitHub README!</p>
 </div>
@@ -11,7 +15,7 @@
 [![License](https://img.shields.io/github/license/dano796/github-stack-sphere)](LICENSE)
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fdano796%2Fgithub-stack-sphere&label=visitors&countColor=%230c7ebe&style=flat&labelStyle=none)
 
-<img src="https://github-stack-sphere.vercel.app/stack.svg?icons=javascript,typescript,python,postgresql,mysql,supabase,express,react,angular,tailwindcss,git,github,figma,trello,html5,css3,docker,pandas,numpy&theme=auto" width="500" alt="Demo" />
+<img src="https://github-stack-sphere.vercel.app/stack.svg?icons=javascript,typescript,python,postgresql,mysql,supabase,express,react,angular,tailwindcss,git,github,figma,trello,html5,css3,docker,pandas,numpy&theme=auto&v=2" width="500" alt="Demo" />
 
 </div>
 
