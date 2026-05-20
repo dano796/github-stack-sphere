@@ -11,7 +11,7 @@
 [![License](https://img.shields.io/github/license/dano796/github-stack-sphere)](LICENSE)
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fdano796%2Fgithub-stack-sphere&label=visitors&countColor=%230c7ebe&style=flat&labelStyle=none)
 
-<img src="https://github-stack-sphere.vercel.app/stack.svg?icons=javascript,typescript,python,postgresql,mysql,supabase,express,react,angular,tailwindcss,git,github,figma,trello,html5,css3,docker,pandas,numpy" width="500" alt="Demo" />
+<img src="https://github-stack-sphere.vercel.app/stack.svg?icons=javascript,typescript,python,postgresql,mysql,supabase,express,react,angular,tailwindcss,git,github,figma,trello,html5,css3,docker,pandas,numpy&theme=auto" width="500" alt="Demo" />
 
 </div>
 
