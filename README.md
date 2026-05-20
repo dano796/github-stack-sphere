@@ -43,13 +43,16 @@ And that's it. It's really that simple!
 
 ## Parameters
 
-| Parameter | Default  | Values                | Description                                            |
-| --------- | -------- | --------------------- | ------------------------------------------------------ |
-| `icons`   | required | comma-separated slugs | Tech icons to display (max 30)                         |
-| `theme`   | `dark`   | `dark` `light` `auto` | Background theme. `auto` adapts to viewer's OS setting |
-| `speed`   | `30`     | `5`–`60`              | Seconds per full rotation. Higher = slower             |
-| `size`    | `500`    | `300`–`800`           | SVG width in pixels                                    |
-| `v`       | —        | any                   | Cache-busting. Increment when updating your icon list  |
+| Parameter   | Default  | Values                                | Description                                                                       |
+| ----------- | -------- | ------------------------------------- | --------------------------------------------------------------------------------- |
+| `icons`     | required | comma-separated slugs                 | Tech icons to display (max 30)                                                    |
+| `theme`     | `dark`   | `dark` `light` `auto` `transparent`   | Background theme. `auto` adapts to viewer's OS setting. `transparent` omits the background entirely |
+| `speed`     | `30`     | `5`–`60`                              | Seconds per full rotation. Higher = slower                                        |
+| `size`      | `500`    | `300`–`800`                           | SVG width in pixels                                                               |
+| `direction` | `cw`     | `cw` `ccw`                            | Rotation direction (clockwise or counter-clockwise)                               |
+| `bg`        | —        | hex color (3 or 6 chars, no `#`)      | Custom background color. Overrides the `theme` background. Ignored when `theme=transparent` |
+| `iconColor` | —        | hex color (3 or 6 chars, no `#`)      | Paints every icon with the same color, ignoring brand colors                      |
+| `v`         | —        | any                                   | Cache-busting. Increment when updating your icon list                             |
 
 ---
 
@@ -65,12 +68,13 @@ List the slugs you want, separated by commas (max 30). Find slugs at [simpleicon
 
 #### `theme`
 
-Controls the background color. `auto` adapts to the viewer's GitHub dark/light mode.
+Controls the background color. `auto` adapts to the viewer's GitHub dark/light mode. `transparent` omits the background entirely, so the SVG blends with whatever page renders it.
 
 ```md
 ![Dark](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&theme=dark)
 ![Light](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&theme=light)
 ![Auto](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&theme=auto)
+![Transparent](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&theme=transparent)
 ```
 
 #### `speed`
@@ -89,6 +93,30 @@ SVG width in pixels. Default is `500`. Height is always 80% of width.
 ```md
 ![Small](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&size=300)
 ![Large](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&size=700)
+```
+
+#### `direction`
+
+Rotation direction. `cw` is clockwise (default), `ccw` is counter-clockwise.
+
+```md
+![CCW](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&direction=ccw)
+```
+
+#### `bg`
+
+Custom background color as a hex string (no `#`). Overrides the theme background.
+
+```md
+![Custom bg](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&bg=1a1a2e)
+```
+
+#### `iconColor`
+
+Paints every icon with a single uniform color (hex, no `#`), ignoring brand colors. Useful for monochrome layouts.
+
+```md
+![Mono](https://github-stack-sphere.vercel.app/stack.svg?icons=typescript,react,docker&iconColor=ffffff&bg=000000)
 ```
 
 #### `v`

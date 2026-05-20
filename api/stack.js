@@ -31,10 +31,10 @@ export default function handler(req, res) {
     return res.status(400).send(errorSVG(validation.error));
   }
 
-  const { slugs, theme, speed, size } = validation;
+  const { slugs, theme, speed, size, direction, bg, iconColor } = validation;
 
   // --- Resolve icons from simple-icons ---
-  const { resolved, skipped } = resolveIcons(slugs, theme);
+  const { resolved, skipped } = resolveIcons(slugs, theme, iconColor);
 
   if (resolved.length === 0) {
     res.setHeader("Content-Type", "image/svg+xml; charset=utf-8");
@@ -49,6 +49,7 @@ export default function handler(req, res) {
   const { keyframeCss, initialZOrder } = computeKeyframes(spherePoints, {
     speed,
     size,
+    direction,
   });
   const svg = buildSVG({
     icons: resolved,
@@ -57,6 +58,7 @@ export default function handler(req, res) {
     theme,
     size,
     speed,
+    bg,
     skipped,
   });
 
